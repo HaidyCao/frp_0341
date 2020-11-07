@@ -19,8 +19,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/fatedier/frp/pkg/config"
-	"github.com/fatedier/frp/pkg/consts"
+	"github.com/HaidyCao/frp_0341/pkg/config"
+	"github.com/HaidyCao/frp_0341/pkg/consts"
 
 	"github.com/spf13/cobra"
 )

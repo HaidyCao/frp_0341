@@ -27,27 +27,27 @@ import (
 	"strings"
 	"time"
 
-	"github.com/fatedier/frp/assets"
-	"github.com/fatedier/frp/pkg/auth"
-	"github.com/fatedier/frp/pkg/config"
-	modelmetrics "github.com/fatedier/frp/pkg/metrics"
-	"github.com/fatedier/frp/pkg/msg"
-	"github.com/fatedier/frp/pkg/nathole"
-	plugin "github.com/fatedier/frp/pkg/plugin/server"
-	"github.com/fatedier/frp/pkg/transport"
-	"github.com/fatedier/frp/pkg/util/log"
-	frpNet "github.com/fatedier/frp/pkg/util/net"
-	"github.com/fatedier/frp/pkg/util/tcpmux"
-	"github.com/fatedier/frp/pkg/util/util"
-	"github.com/fatedier/frp/pkg/util/version"
-	"github.com/fatedier/frp/pkg/util/vhost"
-	"github.com/fatedier/frp/pkg/util/xlog"
-	"github.com/fatedier/frp/server/controller"
-	"github.com/fatedier/frp/server/group"
-	"github.com/fatedier/frp/server/metrics"
-	"github.com/fatedier/frp/server/ports"
-	"github.com/fatedier/frp/server/proxy"
-	"github.com/fatedier/frp/server/visitor"
+	"github.com/HaidyCao/frp_0341/assets"
+	"github.com/HaidyCao/frp_0341/pkg/auth"
+	"github.com/HaidyCao/frp_0341/pkg/config"
+	modelmetrics "github.com/HaidyCao/frp_0341/pkg/metrics"
+	"github.com/HaidyCao/frp_0341/pkg/msg"
+	"github.com/HaidyCao/frp_0341/pkg/nathole"
+	plugin "github.com/HaidyCao/frp_0341/pkg/plugin/server"
+	"github.com/HaidyCao/frp_0341/pkg/transport"
+	"github.com/HaidyCao/frp_0341/pkg/util/log"
+	frpNet "github.com/HaidyCao/frp_0341/pkg/util/net"
+	"github.com/HaidyCao/frp_0341/pkg/util/tcpmux"
+	"github.com/HaidyCao/frp_0341/pkg/util/util"
+	"github.com/HaidyCao/frp_0341/pkg/util/version"
+	"github.com/HaidyCao/frp_0341/pkg/util/vhost"
+	"github.com/HaidyCao/frp_0341/pkg/util/xlog"
+	"github.com/HaidyCao/frp_0341/server/controller"
+	"github.com/HaidyCao/frp_0341/server/group"
+	"github.com/HaidyCao/frp_0341/server/metrics"
+	"github.com/HaidyCao/frp_0341/server/ports"
+	"github.com/HaidyCao/frp_0341/server/proxy"
+	"github.com/HaidyCao/frp_0341/server/visitor"
 
 	"github.com/fatedier/golib/net/mux"
 	fmux "github.com/hashicorp/yamux"
@@ -353,8 +353,8 @@ func (svr *Service) Stop() error {
 	}
 	close(svr.closedCh)
 	svr.Closed = true
-	svr.rc.TcpPortManager.Stop()
-	svr.rc.UdpPortManager.Stop()
+	svr.rc.TCPPortManager.Stop()
+	svr.rc.UDPPortManager.Stop()
 	return err
 }
 

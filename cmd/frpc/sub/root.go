@@ -25,11 +25,11 @@ import (
 	"syscall"
 	"time"
 
-	"github.com/fatedier/frp/client"
-	"github.com/fatedier/frp/pkg/auth"
-	"github.com/fatedier/frp/pkg/config"
-	"github.com/fatedier/frp/pkg/util/log"
-	"github.com/fatedier/frp/pkg/util/version"
+	"github.com/HaidyCao/frp_0341/client"
+	"github.com/HaidyCao/frp_0341/pkg/auth"
+	"github.com/HaidyCao/frp_0341/pkg/config"
+	"github.com/HaidyCao/frp_0341/pkg/util/log"
+	"github.com/HaidyCao/frp_0341/pkg/util/version"
 	"github.com/fatedier/golib/crypto"
 
 	"github.com/spf13/cobra"
@@ -310,8 +310,8 @@ func startService(
 
 func returnService(cfg config.ClientCommonConf, pxyCfgs map[string]config.ProxyConf, visitorCfgs map[string]config.VisitorConf, cfgFile string) (svr *client.Service, err error) {
 	log.InitLog(cfg.LogWay, cfg.LogFile, cfg.LogLevel, cfg.LogMaxDays, cfg.DisableLogColor)
-	if cfg.DnsServer != "" {
-		s := cfg.DnsServer
+	if cfg.DNSServer != "" {
+		s := cfg.DNSServer
 		if !strings.Contains(s, ":") {
 			s += ":53"
 		}

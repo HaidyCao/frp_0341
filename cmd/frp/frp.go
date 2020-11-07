@@ -15,9 +15,9 @@
 package frp
 
 import (
-	"github.com/fatedier/frp/cmd/frpc/sub"
-	"github.com/fatedier/frp/cmd/frps/frps"
-	"github.com/fatedier/frp/utils/version"
+	"github.com/HaidyCao/frp_0341/cmd/frpc/sub"
+	"github.com/HaidyCao/frp_0341/cmd/frps/frps"
+	"github.com/HaidyCao/frp_0341/pkg/util/version"
 	"github.com/fatedier/golib/crypto"
 	"runtime/debug"
 )
